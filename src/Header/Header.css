@@ -1,0 +1,45 @@
+.land-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.landingart {
+  --travel-primitives-themeable-image-default: url(https://www.gstatic.com/travel-frontend/animation/hero/flights_nc_4.svg);
+  --travel-primitives-themeable-image-dark: url(https://www.gstatic.com/travel-frontend/animation/hero/flights_nc_dark_theme_4.svg);
+
+  /* Center the image */
+  background-image: var(--travel-primitives-themeable-image-default);
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -0.5px;
+  z-index: 0;
+
+  /* Set a fixed width and height for the container */
+  width: 100%; /* Take up the full width of the parent */
+  max-width: 1250px; /* Limit the maximum width of the container */
+  height: 300px;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .landingart {
+    background-image: var(--travel-primitives-themeable-image-dark);
+  }
+}
+
+.textover {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translate(-50%);
+  display: flex;
+  font-size: 56px;
+  font-weight: 400;
+  justify-content: center;
+  z-index: 1;
+}
